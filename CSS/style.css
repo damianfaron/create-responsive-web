@@ -1,0 +1,219 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: "Open Sans", sans-serif;
+}
+/* class for all */
+.wrapper {
+	margin: 0;
+	width: 100%;
+	/* max-width: 1400px; */
+}
+
+.hero-bg {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: rgb(0, 0, 0, 0.8);
+}
+
+.hero-text {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	/* text-transform: uppercase; */
+	color: white;
+}
+
+.hero-text h1 {
+	margin-bottom: 5px;
+	text-shadow: 3px 3px 5px rgb(4, 4, 4);
+	color: #ddd;
+}
+
+.hero-text span {
+	text-transform: uppercase;
+	color: rgb(14, 153, 196);
+}
+
+/* NAWIGACJA */
+
+nav {
+	position: sticky;
+	top: 0;
+	height: 60px;
+	line-height: 60px;
+	background-color: rgb(207, 201, 201);
+	text-align: center;
+	z-index: 2;
+}
+.nav-items {
+	display: none;
+}
+
+.burger-button {
+	display: block;
+	margin-left: auto;
+	background: none;
+	border: none;
+	padding: 0 30px;
+	line-height: 60px;
+	font-size: 30px;
+	cursor: pointer;
+	transition: color 400ms;
+}
+
+.burger-button:hover {
+	color: #09f;
+}
+
+section {
+	scroll-margin-top: 80px;
+}
+
+/* HEADER */
+
+.header {
+	position: relative;
+	background-image: url("../img/wolves-small.jpg");
+	height: 330px;
+	background-size: cover;
+}
+
+/* MAIN SECTION */
+
+.section-title {
+	margin-bottom: 20px;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+main {
+	margin: 50px 0;
+}
+
+/* sekcja O nas */
+
+.about-us-info {
+	margin-bottom: 10px;
+	padding: 0 20px;
+	text-align: justify;
+}
+
+/* produkty */
+
+.products {
+	margin: 60 auto 0 auto;
+}
+.product {
+	position: relative;
+	height: 300px;
+	background-size: cover;
+	background-position: center;
+	text-align: center;
+}
+
+.product h3 {
+	text-transform: uppercase;
+	transition: 500ms;
+}
+.product:hover h3 {
+	transform: scale(1.5);
+}
+
+.first-product {
+	background-image: url("../img/children-small.jpg");
+}
+
+.second-product {
+	background-image: url("../img/keyboard-small.jpg");
+}
+
+.third-product {
+	background-image: url("../img/woman-small.jpg");
+}
+
+.fourth-product {
+	background-image: url("../img/social-media-3129481_640.jpg");
+}
+/* kontakt */
+
+.contact {
+	text-align: center;
+}
+.contact h2 {
+	margin: 20px;
+}
+.contact h3 {
+	margin: 20px 0 5px;
+	text-transform: uppercase;
+}
+/* footer */
+footer {
+	padding: 30px 10px;
+	text-align: center;
+	background-color: #ddd;
+}
+/* design responsive od tego BREAKPOINT */
+@media (min-width: 768px) {
+	.burger-button {
+		display: none;
+	}
+	.nav-items {
+		display: contents;
+	}
+
+	.nav-items a {
+		padding: 0 30px;
+		text-decoration: none;
+		text-transform: uppercase;
+		font-weight: bold;
+		color: black;
+		transition: color 400ms;
+	}
+
+	.nav-items a:hover {
+		color: #09f;
+	}
+	.header {
+		position: relative;
+		background-image: url("../img/wolves-big.jpg");
+		height: 400px;
+		background-size: cover;
+	}
+	.hero-text h1 {
+		font-size: 36px;
+	}
+
+	.hero-text p {
+		font-size: 18px;
+	}
+}
+
+@media (min-width: 992px) {
+	.parents-box {
+		font-size: 0;
+	}
+	.product {
+		display: inline-block;
+		width: 50%;
+		font-size: 24px;
+	}
+}
+
+@media (min-width: 1200px) {
+	.hero-text h1 {
+		font-size: 42px;
+	}
+	.hero-text p {
+		font-size: 22px;
+	}
+}
